@@ -1,0 +1,15 @@
+<ul class="list-unstyled text-small">
+    
+        <li>
+            <h4><%= @email.object %></h4>
+            <p><%= @email.body %></p>
+        </li>
+        <li>
+        <button type="button" class="btn btn-info">Marquer comme non-lu</button>
+        <%= link_to 'Supprimer email', email_path(email), method: :delete, remote: true, class: "btn btn-danger btn-small" %>
+        </li>
+
+    
+</ul>
+
+

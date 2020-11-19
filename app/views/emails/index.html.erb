@@ -1,0 +1,30 @@
+<div class="container px-5 mb-5">
+  <%= link_to "Recevoir un email", emails_path, class: "btn btn-primary", :method => 'POST', remote: true %>
+
+  <div class="row mx-lg-n5 mt-4">
+
+    <div class="col py-3 px-lg-5 border bg-light">
+      <h3>Liste des emails</h3>
+
+      <ul class="list-unstyled text-small">
+        <% @emails.each do |email|  %>
+        <div class="col py-2 mt-3 border bg-white">
+        <div id="email-new">
+        <li >
+          <strong>Object : </strong> <%= link_to email.object, email_path(email.id), remote: true %>
+        </li>
+        </div>
+        </div>
+        <% end %>
+      </ul>
+    </div>
+
+    
+    <div class="col py-3 px-lg-5 border bg-light">
+      <h3>Emaileuh</h3>
+      <div class = "col py-2 mt-2 border bg-white">
+        <p id="email-show"></p>
+      </div>
+    </div>
+    
+</div>
